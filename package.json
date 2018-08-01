@@ -1,13 +1,15 @@
 {
   "name": "tohru",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Your dragon maid",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "format": "prettier --write src/**/**.js src/**/**.vue"
   },
+  "author": "SkyBeast",
+  "license": "MIT",
   "dependencies": {
     "vue": "^2.5.16"
   },
