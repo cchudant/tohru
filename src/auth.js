@@ -1,7 +1,7 @@
-const { API_URL = 'http://localhost:5050' } = process.env
+const { VUE_APP_API_URL = 'http://localhost:5050' } = process.env
 
 export async function login(username, password) {
-  const res = await fetch(`${API_URL}/login`, {
+  const res = await fetch(`${VUE_APP_API_URL}/login`, {
     headers: { 'Content-Type': 'application/json' },
     method: 'POST',
     body: JSON.stringify({ username, password }),
@@ -15,7 +15,7 @@ export async function login(username, password) {
 }
 
 export async function logout() {
-  const res = await fetch(`${API_URL}/logout`, {
+  const res = await fetch(`${VUE_APP_API_URL}/logout`, {
     headers: { 'Content-Type': 'application/json' },
     method: 'POST',
     credentials: 'include'
@@ -28,7 +28,7 @@ export async function logout() {
 }
 
 export async function logged() {
-  const res = await fetch(`${API_URL}/logged`, {
+  const res = await fetch(`${VUE_APP_API_URL}/logged`, {
     headers: { 'Content-Type': 'application/json' },
     method: 'POST',
     credentials: 'include'

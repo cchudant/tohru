@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-const { API_URL = 'http://localhost:5050' } = process.env
+const { VUE_APP_API_URL = 'http://localhost:5050' } = process.env
 
 export default {
   props: ['path'],
@@ -47,12 +47,12 @@ export default {
         this.$emit('walk', path)
       } else {
         // File
-        open(API_URL + path, '_blank')
+        open(VUE_APP_API_URL + path, '_blank')
       }
     },
     async update() {
       try {
-        const res = await fetch(API_URL + this.path, {
+        const res = await fetch(VUE_APP_API_URL + this.path, {
           headers: { Accept: 'application/json' },
           credentials: 'include'
         })
