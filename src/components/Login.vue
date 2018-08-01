@@ -25,7 +25,7 @@ export default {
         const { username } = await login(this.username, this.password)
         this.$emit('login', username)
       } catch (err) {
-        this.error = err
+        this.err = err
         throw err
       }
     }
